@@ -1,0 +1,23 @@
+.profile {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.users {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.user-link {
+  padding: 10px 20px;
+  background-color: #282c34;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.user-link:hover {
+  background-color: #444;
+}

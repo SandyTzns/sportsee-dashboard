@@ -1,0 +1,115 @@
+.user-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.sidebar {
+  width: 20%;
+  background-color: #343a40;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.sidebar a {
+  color: white;
+  margin: 10px 0;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  color: #61dafb;
+}
+
+.dashboard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: auto; /* Allows vertical scrolling if needed */
+  width: calc(100% - 20%); /* Ensures the dashboard takes the remaining width */
+}
+
+.greetings {
+  padding: 20px;
+  background-color: #282c34;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row; /* Side-by-side layout for charts and nutritional info */
+  gap: 20px;
+  width: 100%;
+  max-width: 100%; /* Ensure it doesn't exceed the parent width */
+}
+
+.charts-container {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  gap: 20px;
+}
+
+.upper-charts {
+  width: 100%;
+}
+
+.lower-charts {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+
+.nutritional-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  height: auto;
+  max-width: 300px; /* Adjust the max width to prevent overflow */
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex-basis: 30%;
+  margin: 10px;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .content-container {
+    flex-direction: column;
+  }
+
+  .lower-charts {
+    flex-direction: column;
+  }
+}

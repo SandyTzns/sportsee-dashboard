@@ -1,0 +1,24 @@
+.sidebar {
+  width: 50px;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-item img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+.sidebar-item {
+  margin-bottom: 20px; /* Space between items */
+}
+
+.sidebar-footer {
+  margin-top: auto; /* Pushes it to the bottom of the sidebar */
+  writing-mode: vertical-rl; /* Vertical text */
+  transform: rotate(180deg); /* Rotate text to read from bottom to top */
+  font-size: 12px; /* Adjust font size as needed */
+}

@@ -1,0 +1,30 @@
+.nutritional-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nutritional-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.nutritional-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.nutritional-value {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.nutritional-label {
+  font-size: 0.8rem;
+  color: #666;
+}
