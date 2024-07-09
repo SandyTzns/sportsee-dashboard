@@ -13,7 +13,22 @@ import protein from "../assets/protein.png";
 import carbs from "../assets/carbs.png";
 import fat from "../assets/fat.png";
 
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { getData } from "../service/getData";
+
 function User() {
+  const { id } = useParams();
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const data = async () => {
+      const response = await getData("USER_MAIN_DATA", parseInt(id));
+      if (!response) return alert("cannot get API");
+      setData(response.data);
+    };
+    data();
+  }, [id]);
   return (
     <div className="user-page">
       <Navbar />

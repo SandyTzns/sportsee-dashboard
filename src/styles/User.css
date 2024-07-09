@@ -37,7 +37,6 @@
   flex-direction: column;
   padding: 20px;
   overflow-y: auto; /* Allows vertical scrolling if needed */
-  width: calc(100% - 20%); /* Ensures the dashboard takes the remaining width */
 }
 
 .greetings {

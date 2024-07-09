@@ -1,21 +1,15 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/Profile.css";
 
-function Profile() {
+export default function Profile() {
   return (
-    <div className="profile">
-      <h1>Choisissez un utilisateur</h1>
-      <div className="users">
-        <Link to="/user/1" className="user-link">
-          Karl
-        </Link>
-        <Link to="/user/2" className="user-link">
-          Cecilia
-        </Link>
-      </div>
+    <div className="users">
+      <Link to="/user/12">
+        <h1> KARL</h1>
+      </Link>
+      <Link to="/user/18">
+        <h1>CÉCILIA</h1>
+      </Link>
     </div>
   );
 }
-
-export default Profile;
