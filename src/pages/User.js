@@ -6,12 +6,7 @@ import ActivityChart from "../components/ActivityChart";
 import PerformanceChart from "../components/PerformanceChart";
 import ScoreChart from "../components/ScoreChart";
 import SessionsChart from "../components/SessionsChart";
-import NutritionalItem from "../components/NutritionalItem";
-
-import calories from "../assets/calories.png";
-import protein from "../assets/protein.png";
-import carbs from "../assets/carbs.png";
-import fat from "../assets/fat.png";
+import Specs from "../components/Specs";
 
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -47,19 +42,10 @@ function User() {
               <div className="lower-charts">
                 <SessionsChart />
                 <PerformanceChart />
-                <ScoreChart data={data.todayScore || data.score} />
+                <ScoreChart data={data} />
               </div>
             </div>
-            <div className="nutritional-info">
-              <NutritionalItem
-                label="Calories"
-                value="1,930kCal"
-                icon={calories}
-              />
-              <NutritionalItem label="Proteins" value="155g" icon={protein} />
-              <NutritionalItem label="Glucides" value="290g" icon={carbs} />
-              <NutritionalItem label="Lipides" value="50g" icon={fat} />
-            </div>
+            <Specs data={data} />
           </div>
         </div>
       </div>

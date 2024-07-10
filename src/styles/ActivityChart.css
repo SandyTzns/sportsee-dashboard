@@ -3,12 +3,12 @@
   flex-direction: column;
   background-color: #fbfbfb;
   gap: 10px;
-  /* padding: 20px; */
   margin-bottom: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   width: 100%;
-  max-width: 1200px; /* Adjust back to original max-width */
+  height: 300px; /* Adjust height to 300px */
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -45,11 +45,11 @@
 
 @media screen and (max-width: 1024px) and (max-height: 780px) {
   .activity_container {
-    height: 250px; /* Adjust height back to original size */
-    width: 100%; /* Adjust width back to original size */
+    height: 250px; /* Adjust height for smaller screens */
+    width: 100%; /* Ensure width adjusts correctly */
   }
 
   .activity_container .recharts-responsive-container {
-    height: 220px; /* Adjust inner chart height back to original size */
+    height: 220px; /* Ensure inner chart height adjusts correctly */
   }
 }

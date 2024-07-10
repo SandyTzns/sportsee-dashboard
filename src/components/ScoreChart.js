@@ -1,40 +1,63 @@
-import { RadialBarChart, RadialBar, ResponsiveContainer } from "recharts";
+import { RadialBarChart, RadialBar } from "recharts";
 import "../styles/ScoreChart.css";
 
 const ScoreChart = ({ data }) => {
-  const scoreData = data * 100;
-  const score = [{ value: scoreData, fill: "#FF0000" }];
-  const formatDataAngle = scoreData * 3.6;
+  const score =
+    data && (data.todayScore || data.score) ? data.todayScore || data.score : 0;
+  const scoreData = score * 100;
+  const dataArray = [{ name: "score", value: score }];
   const startAngle = 90;
-  const endAngle = startAngle + formatDataAngle;
+  const endAngle = startAngle + 360 * score; // Calculate end angle based on percentage
 
   return (
     <div className="score-container">
-      <ResponsiveContainer width="100%" height="100%">
+      <div className="score-title">Score</div>
+      <div className="radialbar-wrapper">
         <RadialBarChart
           cx="50%"
           cy="50%"
           innerRadius="70%"
           outerRadius="80%"
-          startAngle={startAngle}
-          endAngle={endAngle}
-          barSize={10}
-          data={score}
+          startAngle={90}
+          endAngle={450} // Background bar covers full circle
+          width={250}
+          height={250}
+          barSize={10} // Background bar size
+          data={[{ name: "full", value: 1 }]}
         >
           <RadialBar
-            minAngle={15}
-            cornerRadius={10}
-            background
-            clockWise
             dataKey="value"
-            fill="red"
+            background={{ fill: "#FFF" }}
+            clockWise
+            fill="#FFF"
+            cornerRadius={10}
           />
         </RadialBarChart>
-      </ResponsiveContainer>
-      <div className="score-text">
-        <span className="percent">{scoreData}%</span>
-        <span>de votre</span>
-        <span>objectif</span>
+        <RadialBarChart
+          cx="50%"
+          cy="50%"
+          innerRadius="70%"
+          outerRadius="80%"
+          startAngle={90}
+          endAngle={endAngle} // Dynamic end angle based on score
+          width={250}
+          height={250}
+          barSize={20} // Thickness of the red line
+          data={dataArray}
+          style={{ position: "absolute", top: 0, left: 0 }}
+        >
+          <RadialBar
+            dataKey="value"
+            clockWise
+            fill="#FF0000"
+            cornerRadius={10}
+          />
+        </RadialBarChart>
+      </div>
+      <div className="score-label center">
+        <p className="percent">{scoreData}%</p>
+        <p>de votre</p>
+        <p>objectif</p>
       </div>
     </div>
   );

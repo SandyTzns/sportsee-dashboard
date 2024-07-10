@@ -1,0 +1,57 @@
+/* Specs.css */
+
+.specs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "Roboto", sans-serif;
+  height: 100%; /* Ensure the container takes the full height available */
+}
+
+.spec-card {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 10px;
+  padding-left: 30px;
+  background-color: #fbfbfb;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1; /* Ensure the card takes full height */
+}
+
+.spec-icon {
+  height: 40px;
+  width: 40px;
+}
+
+.spec-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.spec-quantity {
+  color: #282d30;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.spec-unit {
+  color: #74798c;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+@media screen and (max-width: 1024px) {
+  .specs-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .spec-card {
+    flex: 1 1 calc(50% - 20px);
+    margin-bottom: 20px;
+  }
+}
