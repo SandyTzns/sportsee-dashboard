@@ -5,7 +5,7 @@
   flex-direction: column;
   gap: 20px;
   font-family: "Roboto", sans-serif;
-  height: 100%; /* Ensure the container takes the full height available */
+  justify-content: space-between;
 }
 
 .spec-card {

@@ -45,9 +45,7 @@
 
 .greetings {
   padding: 20px;
-  background-color: #282c34;
-  color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: black;
   margin-bottom: 20px; /* Add margin to separate from charts */
 }
 
@@ -56,8 +54,8 @@
   flex-direction: row; /* Side-by-side layout for charts and nutritional info */
   gap: 20px;
   width: 100%;
+  flex: 1; /* Allow content-container to grow to fill available space */
   max-width: 100%; /* Ensure it doesn't exceed the parent width */
-  height: 100%; /* Ensure it takes the full height available */
 }
 
 .charts-container {
@@ -94,7 +92,8 @@
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  height: auto;
+  height: 100%;
   max-width: 300px; /* Adjust the max width to prevent overflow */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  justify-content: space-between;
 }

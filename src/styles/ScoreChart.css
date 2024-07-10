@@ -27,8 +27,9 @@
   color: #20253a;
   font-size: 0.9375rem;
   font-weight: 500;
-  margin-bottom: 10px;
-  align-self: flex-start;
+  position: absolute;
+  top: 11px;
+  left: 37px;
 }
 
 .score-label {
@@ -37,7 +38,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  top: 56%;
+  top: 50%; /* Adjusted positioning */
   left: 50%;
   transform: translate(-50%, -50%);
   color: #9b9eac;
@@ -46,8 +47,8 @@
   text-align: center;
   background-color: white; /* Ensure the background color is white */
   border-radius: 50%;
-  width: 158px; /* Adjust the size as needed */
-  height: 158px; /* Adjust the size as needed */
+  width: 158px; /* Adjusted size */
+  height: 158px; /* Adjusted size */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
