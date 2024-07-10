@@ -57,7 +57,7 @@ const ActivityChart = () => {
           </li>
         </ul>
       </div>
-      <ResponsiveContainer width="100%" height={300}>
+      <ResponsiveContainer width="100%" height="100%">
         <BarChart data={activity} barCategoryGap="10%" barGap={4}>
           <CartesianGrid strokeDasharray="3 3" vertical={false} />
           <XAxis

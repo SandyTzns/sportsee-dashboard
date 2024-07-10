@@ -3,15 +3,18 @@
   flex-direction: column;
   background-color: #fbfbfb;
   gap: 10px;
-  padding: 20px;
+  /* padding: 20px; */
   margin-bottom: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  width: 100%;
+  max-width: 1200px; /* Adjust back to original max-width */
+  margin: 0 auto;
 }
 
 .legend {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   font-size: 14px;
 }
@@ -38,4 +41,15 @@
   background-color: red;
   color: white;
   border-radius: 5px;
+}
+
+@media screen and (max-width: 1024px) and (max-height: 780px) {
+  .activity_container {
+    height: 250px; /* Adjust height back to original size */
+    width: 100%; /* Adjust width back to original size */
+  }
+
+  .activity_container .recharts-responsive-container {
+    height: 220px; /* Adjust inner chart height back to original size */
+  }
 }

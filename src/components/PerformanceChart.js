@@ -1,47 +1,47 @@
-import React from "react";
-import { RadialBarChart, RadialBar, Legend } from "recharts";
+import { useParams } from "react-router";
+import { useEffect, useState } from "react";
+import { getData } from "../service/getData";
+import {
+  Radar,
+  RadarChart,
+  PolarGrid,
+  PolarAngleAxis,
+  ResponsiveContainer,
+} from "recharts";
+import "../styles/PerformanceChart.css";
 
-const data = [
-  { name: "18-24", uv: 31.47, fill: "#8884d8" },
-  { name: "25-29", uv: 26.69, fill: "#83a6ed" },
-  // Add more data as needed
-];
+const PerformanceChart = () => {
+  const { id } = useParams();
+  const [performance, setPerformance] = useState([]);
 
-const style = {
-  top: 0,
-  left: 350,
-  lineHeight: "24px",
-};
+  useEffect(() => {
+    const data = async () => {
+      const request = await getData("USER_PERFORMANCE", parseInt(id));
+      if (!request) return alert("Error Performance Chart");
 
-function PerformanceChart() {
+      const performanceResponseData = request.data?.data;
+      const performanceResponseKind = request.data?.kind;
+
+      const newPerformanceArray = performanceResponseData?.map((object) => ({
+        value: object.value,
+        kind: performanceResponseKind[`${object.kind}`],
+      }));
+
+      setPerformance(newPerformanceArray);
+    };
+    data();
+  }, [id]);
+
   return (
-    <RadialBarChart
-      width={300}
-      height={250}
-      cx={150}
-      cy={125}
-      innerRadius={20}
-      outerRadius={140}
-      barSize={10}
-      data={data}
-    >
-      <RadialBar
-        minAngle={15}
-        label={{ position: "insideStart", fill: "#fff" }}
-        background
-        clockWise
-        dataKey="uv"
-      />
-      <Legend
-        iconSize={10}
-        width={120}
-        height={140}
-        layout="vertical"
-        verticalAlign="middle"
-        wrapperStyle={style}
-      />
-    </RadialBarChart>
+    <div className="performance-container">
+      <ResponsiveContainer width="100%" height="100%">
+        <RadarChart cx="50%" cy="50%" outerRadius="70%" data={performance}>
+          <PolarGrid radialLines={false} />
+          <PolarAngleAxis dataKey="kind" />
+          <Radar dataKey="value" fill="red" fillOpacity={0.6} />
+        </RadarChart>
+      </ResponsiveContainer>
+    </div>
   );
-}
-
+};
 export default PerformanceChart;

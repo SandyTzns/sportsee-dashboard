@@ -1,0 +1,28 @@
+.score-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #fbfbfb;
+  flex: 1;
+  min-width: 0; /* Allow shrinking */
+  border: 1px solid black;
+}
+
+.score-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 27%;
+  left: 26%;
+  font-weight: 500;
+  color: #979797;
+  background-color: white;
+  border-radius: 50%;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.percent {
+  color: #282d30;
+}

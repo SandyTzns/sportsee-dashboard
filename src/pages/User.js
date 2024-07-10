@@ -47,7 +47,7 @@ function User() {
               <div className="lower-charts">
                 <SessionsChart />
                 <PerformanceChart />
-                <ScoreChart />
+                <ScoreChart data={data.todayScore || data.score} />
               </div>
             </div>
             <div className="nutritional-info">

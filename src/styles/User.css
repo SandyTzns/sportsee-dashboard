@@ -3,12 +3,14 @@
   flex-direction: column;
   height: 100vh;
   background-color: #f8f9fa;
+  overflow-y: auto; /* Allow vertical scrolling */
 }
 
 .main-content {
   display: flex;
   flex: 1;
   overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto; /* Allow vertical scrolling */
 }
 
 .sidebar {
@@ -44,6 +46,7 @@
   background-color: #282c34;
   color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Add margin to separate from charts */
 }
 
 .content-container {
@@ -63,6 +66,7 @@
 
 .upper-charts {
   width: 100%;
+  margin-bottom: 20px; /* Ensure space between upper and lower charts */
 }
 
 .lower-charts {
@@ -70,6 +74,13 @@
   justify-content: space-between;
   width: 100%;
   gap: 20px;
+  flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.lower-charts > div {
+  flex: 1; /* Allow charts to grow/shrink equally */
+  min-width: 0; /* Allow shrinking */
+  height: 250px; /* Ensure uniform height */
 }
 
 .nutritional-info {
@@ -105,10 +116,14 @@
   }
 
   .content-container {
-    flex-direction: column;
+    flex-direction: row; /* Ensure it stays row on smaller screens */
   }
 
   .lower-charts {
-    flex-direction: column;
+    flex-direction: row; /* Ensure it stays row on smaller screens */
+  }
+
+  .lower-charts > div {
+    height: 200px; /* Adjust height for smaller screens */
   }
 }

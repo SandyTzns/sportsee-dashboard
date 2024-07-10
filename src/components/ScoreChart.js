@@ -1,47 +1,43 @@
-import React from "react";
-import {
-  Radar,
-  RadarChart,
-  PolarGrid,
-  PolarAngleAxis,
-  PolarRadiusAxis,
-} from "recharts";
+import { RadialBarChart, RadialBar, ResponsiveContainer } from "recharts";
+import "../styles/ScoreChart.css";
 
-const data = [
-  { subject: "Math", A: 120, B: 110, fullMark: 150 },
-  { subject: "Chinese", A: 98, B: 130, fullMark: 150 },
-  // Add more data as needed
-];
+const ScoreChart = ({ data }) => {
+  const scoreData = data * 100;
+  const score = [{ value: scoreData, fill: "#FF0000" }];
+  const formatDataAngle = scoreData * 3.6;
+  const startAngle = 90;
+  const endAngle = startAngle + formatDataAngle;
 
-function ScoreChart() {
   return (
-    <RadarChart
-      cx={150}
-      cy={125}
-      outerRadius={90}
-      width={300}
-      height={250}
-      data={data}
-    >
-      <PolarGrid />
-      <PolarAngleAxis dataKey="subject" />
-      <PolarRadiusAxis angle={30} domain={[0, 150]} />
-      <Radar
-        name="Mike"
-        dataKey="A"
-        stroke="#8884d8"
-        fill="#8884d8"
-        fillOpacity={0.6}
-      />
-      <Radar
-        name="Lily"
-        dataKey="B"
-        stroke="#82ca9d"
-        fill="#82ca9d"
-        fillOpacity={0.6}
-      />
-    </RadarChart>
+    <div className="score-container">
+      <ResponsiveContainer width="100%" height="100%">
+        <RadialBarChart
+          cx="50%"
+          cy="50%"
+          innerRadius="70%"
+          outerRadius="80%"
+          startAngle={startAngle}
+          endAngle={endAngle}
+          barSize={10}
+          data={score}
+        >
+          <RadialBar
+            minAngle={15}
+            cornerRadius={10}
+            background
+            clockWise
+            dataKey="value"
+            fill="red"
+          />
+        </RadialBarChart>
+      </ResponsiveContainer>
+      <div className="score-text">
+        <span className="percent">{scoreData}%</span>
+        <span>de votre</span>
+        <span>objectif</span>
+      </div>
+    </div>
   );
-}
+};
 
 export default ScoreChart;

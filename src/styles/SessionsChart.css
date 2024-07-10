@@ -1,0 +1,29 @@
+.sessions-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: red;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  min-width: 0; /* Allow shrinking */
+}
+
+.tooltip {
+  display: flex;
+  color: black;
+  font-size: 8;
+  font-weight: 500;
+  align-items: center;
+  gap: 40px;
+  padding: 10px;
+  background-color: white;
+}
+
+.sessions_legend {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  color: white;
+  opacity: 0.5;
+}
