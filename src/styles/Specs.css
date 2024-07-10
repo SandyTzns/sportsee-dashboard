@@ -1,5 +1,3 @@
-/* Specs.css */
-
 .specs-container {
   display: flex;
   flex-direction: column;
@@ -17,7 +15,7 @@
   background-color: #fbfbfb;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  flex: 1; /* Ensure the card takes full height */
+  flex: 1;
 }
 
 .spec-icon {

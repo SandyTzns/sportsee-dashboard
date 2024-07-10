@@ -7,7 +7,7 @@ const ScoreChart = ({ data }) => {
   const scoreData = score * 100;
   const dataArray = [{ name: "score", value: score }];
   const startAngle = 90;
-  const endAngle = startAngle + 360 * score; // Calculate end angle based on percentage
+  const endAngle = startAngle + 360 * score;
 
   return (
     <div className="score-container">
@@ -19,10 +19,10 @@ const ScoreChart = ({ data }) => {
           innerRadius="70%"
           outerRadius="80%"
           startAngle={90}
-          endAngle={450} // Background bar covers full circle
+          endAngle={450}
           width={250}
           height={250}
-          barSize={10} // Background bar size
+          barSize={10}
           data={[{ name: "full", value: 1 }]}
         >
           <RadialBar
@@ -39,10 +39,10 @@ const ScoreChart = ({ data }) => {
           innerRadius="70%"
           outerRadius="80%"
           startAngle={90}
-          endAngle={endAngle} // Dynamic end angle based on score
+          endAngle={endAngle}
           width={250}
           height={250}
-          barSize={20} // Thickness of the red line
+          barSize={20}
           data={dataArray}
           style={{ position: "absolute", top: 0, left: 0 }}
         >

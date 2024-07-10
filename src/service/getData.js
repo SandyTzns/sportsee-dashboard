@@ -1,7 +1,7 @@
 import apiCall from "../data/apiCall";
 import MockData from "../data/mockData";
 
-let useDatafromAPI = "false";
+let useDatafromAPI = "true";
 const exportedAPI = useDatafromAPI == "true" ? apiCall : MockData;
 
 export const getData = async (type, id) => {
@@ -23,6 +23,3 @@ export const getData = async (type, id) => {
   }
   return data;
 };
-
-// J'initialise une variable pour vérifier que la condition est true or not
-// condition ternaire pour savoir si j'utilise les data de l'API ou du MOCKDATA en fonction du dessus

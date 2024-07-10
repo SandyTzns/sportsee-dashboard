@@ -1,18 +1,16 @@
-/* User.css */
-
 .user-page {
   display: flex;
   flex-direction: column;
   height: 100vh;
   background-color: #f8f9fa;
-  overflow-y: auto; /* Allow vertical scrolling */
+  overflow-y: auto;
 }
 
 .main-content {
   display: flex;
   flex: 1;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  overflow-y: auto; /* Allow vertical scrolling */
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .sidebar {
@@ -40,22 +38,22 @@
   display: flex;
   flex-direction: column;
   padding: 20px;
-  overflow-y: auto; /* Allows vertical scrolling if needed */
+  overflow-y: auto;
 }
 
 .greetings {
   padding: 20px;
   color: black;
-  margin-bottom: 20px; /* Add margin to separate from charts */
+  margin-bottom: 20px;
 }
 
 .content-container {
   display: flex;
-  flex-direction: row; /* Side-by-side layout for charts and nutritional info */
+  flex-direction: row;
   gap: 20px;
   width: 100%;
-  flex: 1; /* Allow content-container to grow to fill available space */
-  max-width: 100%; /* Ensure it doesn't exceed the parent width */
+  flex: 1;
+  max-width: 100%;
 }
 
 .charts-container {
@@ -67,7 +65,7 @@
 
 .upper-charts {
   width: 100%;
-  margin-bottom: 20px; /* Ensure space between upper and lower charts */
+  margin-bottom: 20px;
 }
 
 .lower-charts {
@@ -75,13 +73,13 @@
   justify-content: space-between;
   width: 100%;
   gap: 20px;
-  flex-wrap: nowrap; /* Prevent wrapping */
+  flex-wrap: nowrap;
 }
 
 .lower-charts > div {
-  flex: 1; /* Allow charts to grow/shrink equally */
-  min-width: 0; /* Allow shrinking */
-  height: 250px; /* Ensure uniform height */
+  flex: 1;
+  min-width: 0;
+  height: 250px;
 }
 
 .specs-container {
@@ -93,7 +91,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   height: 100%;
-  max-width: 300px; /* Adjust the max width to prevent overflow */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  max-width: 300px;
+  box-sizing: border-box;
   justify-content: space-between;
 }

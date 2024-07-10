@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Sidebar.css";
-import iconone from "../assets/iconone.png"; // Ensure the path to your image is correct
+import iconone from "../assets/iconone.png";
 import icontwo from "../assets/icontwo.png";
 import iconthree from "../assets/iconthree.png";
 import iconfour from "../assets/iconfour.png";
