@@ -5,7 +5,9 @@
   background-color: #f8f9fa;
   overflow-y: auto;
 }
-
+.user_firstname {
+  color: red;
+}
 .main-content {
   display: flex;
   flex: 1;

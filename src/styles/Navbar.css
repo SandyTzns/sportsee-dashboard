@@ -27,6 +27,6 @@
   transition: background 0.3s;
 }
 
-.navbar a:hover {
-  background-color: #61dafb;
+.navbar-logo a {
+  padding: 0;
 }

@@ -31,7 +31,12 @@ function User() {
         <Sidebar />
         <div className="dashboard">
           <header className="greetings">
-            <h1>Bonjour {data.userInfos?.firstName}</h1>
+            <h1>
+              Bonjour{" "}
+              <span className="user_firstname">
+                {data.userInfos?.firstName}
+              </span>
+            </h1>
             <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
           </header>
           <div className="content-container">
