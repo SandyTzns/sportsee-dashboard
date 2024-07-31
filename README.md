@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Sportsee
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ce projet est une application de suivi d'activité physique créée avec React et Recharts. Elle permet d'afficher divers graphiques et statistiques sur les activités des utilisateurs.
 
-## Available Scripts
+## Technologies Utilisées
 
-In the project directory, you can run:
+- **React** : Pour la construction de l'interface utilisateur.
+- **Axios** : Pour effectuer les appels API.
+- **React Router Dom** : Pour le routage des différentes pages.
+- **Recharts** : Pour afficher les graphiques interactifs.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Pour installer et exécuter ce projet localement, suivez les étapes ci-dessous :
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Clonez le dépôt :
 
-### `npm test`
+```bash
+git clone
+cd sportsee-dashboard
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Installez les dépendances :
 
-### `npm run build`
+```bash
+ npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Démarrez l'application :
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+  npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Installer et démarrer le backend :
 
-### `npm run eject`
+Ce projet nécessite un backend pour fonctionner correctement. Vous pouvez trouver le backend nécessaire à cette adresse : [Backend Sportsee.](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Suivez les instructions du dépôt backend pour l'installer et le démarrer.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Composants Principaux
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Dashboard
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Le composant `Dashboard` affiche les principales statistiques et graphiques concernant l'utilisateur.
+Les données sont obtenues via des appels à une API et sont gérées avec le hook useEffect.
 
-## Learn More
+### ActivityChart
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Le composant `ActivityChart` utilise Recharts pour afficher un graphique des activités quotidiennes.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### AverageSessionsChart
 
-### Code Splitting
+Le composant `AverageSessionsChart` affiche la durée moyenne des sessions d'activité.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### PerformanceChart
 
-### Analyzing the Bundle Size
+Le composant `PerformanceChart` montre les performances de l'utilisateur dans différents domaines (cardio, énergie, etc.).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### ScoreChart
 
-### Making a Progressive Web App
+Le composant `ScoreChart` affiche un graphique en forme de cercle représentant le score de l'utilisateur.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Specs
 
-### Advanced Configuration
+Le composant `Specs` affiche les détails nutritionnels (calories, proteines, glucides, lipides) de l'utilisateur sous forme de cartes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Choix entre les données de l'API et les données mockées
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Le projet Sportsee permet de choisir entre l'utilisation des données provenant de l'API backend ou des données mockées.
+Cela peut être configuré dans le fichier `service/getData.js`.
