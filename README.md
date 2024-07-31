@@ -69,3 +69,7 @@ Le composant `Specs` affiche les détails nutritionnels (calories, proteines, gl
 
 Le projet Sportsee permet de choisir entre l'utilisation des données provenant de l'API backend ou des données mockées.
 Cela peut être configuré dans le fichier `service/getData.js`.
+
+## Captures d'écran
+
+Voici quelques captures d'écran montrant à quoi ressemble le site :

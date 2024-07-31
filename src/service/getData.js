@@ -1,7 +1,7 @@
 import apiCall from "../data/apiCall";
 import MockData from "../data/mockData";
 
-let useDatafromAPI = "true";
+let useDatafromAPI = "false";
 const exportedAPI = useDatafromAPI == "true" ? apiCall : MockData;
 
 export const getData = async (type, id) => {
