@@ -73,3 +73,5 @@ Cela peut être configuré dans le fichier `service/getData.js`.
 ## Captures d'écran
 
 Voici quelques captures d'écran montrant à quoi ressemble le site :
+Page de profil : ![Page de profil](https://github.com/user-attachments/assets/248726a6-b3d9-40ae-a004-b0e11941e168)
+Dashboard : ![Dashboard](https://github.com/user-attachments/assets/0a4096d5-8678-467c-894d-415072a34db0)
